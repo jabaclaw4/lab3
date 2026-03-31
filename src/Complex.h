@@ -4,11 +4,10 @@
 #include <iostream>
 #include <cmath>
 
-//комплексное число: a + bi
 class Complex {
 private:
-    double real;  //действительная часть
-    double imag;  //мнимая часть
+    double real;
+    double imag; //мнимая часть
 
 public:
     //конструктор по умолчанию (0 + 0i)
@@ -34,8 +33,6 @@ public:
     double Abs() const {
         return std::sqrt(this->real * this->real + this->imag * this->imag);
     }
-
-    //ОПЕРАЦИИ С КОМПЛЕКСНЫМИ ЧИСЛАМИ
 
     //сложение: (a + bi) + (c + di) = (a+c) + (b+d)i
     Complex operator+(const Complex& other) const {
