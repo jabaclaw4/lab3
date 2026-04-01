@@ -34,8 +34,7 @@ public:
 
         return this->data->Get(index);
     }
-
-    //✅ ДОБАВЛЕНО: безопасное получение (монада)
+//монада
     ResultInfo<T> TryGet(int index) const override {
         if (index < 0 || index >= this->GetSize()) {
             return ResultInfo<T>::Failure("index out of range");
@@ -104,7 +103,7 @@ public:
     }
 
 private:
-    static double NormHelper(int value) { //NormHelper() возвращает МОДУЛЬ:
+    static double NormHelper(int value) { //NormHelper() возвращает модуль
 //  для int/double → само число
 //  для Complex → |z| = sqrt(a² + b²)
 //иначе norm возвращает не дабл а комплекс а дабл нужен тк нормировка это вещ число

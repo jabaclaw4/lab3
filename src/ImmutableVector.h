@@ -4,7 +4,7 @@
 #include "VectorBase.h"
 #include "ImmutableArraySequence.h"
 
-//неизменяемый вектор (операции возвращают новый вектор)
+//операции возвращают новый вектор
 template <class T>
 class ImmutableVector : public VectorBase<T> {
 protected:

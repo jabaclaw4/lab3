@@ -4,7 +4,7 @@
 #include "VectorBase.h"
 #include "MutableArraySequence.h"
 
-//изменяемый вектор (работает на месте)
+//изменяемый вектор
 template <class T>
 class MutableVector : public VectorBase<T> {
 protected:
@@ -61,10 +61,9 @@ public:
         }
     }
 
-    //✅ ДОБАВЛЕНО: оператор присваивания
     MutableVector& operator=(const MutableVector<T>& other) {
         if (this == &other) {
-            return *this;  //защита от self-assignment
+            return *this;
         }
 
         //удаляем старые данные

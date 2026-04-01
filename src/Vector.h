@@ -17,10 +17,7 @@ public:
     //получить размер вектора
     virtual int GetSize() const = 0;
 
-    //✅ ДОБАВЛЕНО: безопасное получение элемента (монада)
     virtual ResultInfo<T> TryGet(int index) const = 0;
-
-    //ОПЕРАЦИИ С ВЕКТОРАМИ
 
     //сложение векторов: v1 + v2
     virtual Vector<T>* Add(const Vector<T>& other) const = 0;
@@ -39,7 +36,6 @@ public:
         return this->Get(index);
     }
 
-    //оператор << для вывода
     friend std::ostream& operator<<(std::ostream& os, const Vector<T>& vec) {
         os << "[";
         for (int i = 0; i < vec.GetSize(); i++) {
