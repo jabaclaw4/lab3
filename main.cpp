@@ -9,14 +9,13 @@
 //еще че нибудь на доп баллы
 using namespace std;
 
-//глобальные указатели на текущие векторы
 Vector<int>* g_vec_int = nullptr;
 Vector<double>* g_vec_double = nullptr;
 Vector<Complex>* g_vec_complex = nullptr;
 
-enum VectorType { NONE, INT, DOUBLE, COMPLEX }; //Хранилище типа текущего активного вектора
-//Индикатор состояния (есть вектор или нет)
-VectorType g_current_type = NONE;//Флаг, который говорит: "Сейчас активен вектор типа такогото
+enum VectorType { NONE, INT, DOUBLE, COMPLEX }; //хранилище типа текущего активного вектора
+//индикатор состояния (есть вектор или нет)
+VectorType g_current_type = NONE;//флаг который говорит сейчас активен вектор типа такогото
 
 void print_menu() {
     cout << "\n===== MENU =====" << endl;
