@@ -2,7 +2,8 @@
 #define VECTOR_H
 
 #include <iostream>
-#include "ResultInfo.h"  //✅ ДОБАВИЛИ!
+#include "ResultInfo.h"
+#include "VectorBase.h"
 
 //базовый интерфейс для векторов
 template <class T>
@@ -36,17 +37,36 @@ public:
         return this->Get(index);
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const Vector<T>& vec) {
-        os << "[";
-        for (int i = 0; i < vec.GetSize(); i++) {
-            os << vec.Get(i);
-            if (i < vec.GetSize() - 1) {
-                os << ", ";
+    Vector<T>* operator+(const Vector<T>& other) const {
+        return this->Add(other);
+    }
+
+    Vector<T>* operator*(const T& scalar) const {
+        return this->MultiplyByScalar(scalar);
+    }
+
+    friend Vector<T>* operator*(const T& scalar, const Vector<T>& vec) {
+        return vec * scalar;//доступ к закрытым полям
+    }
+
+    bool operator==(const Vector<T>& other) const {
+        if (this->GetSize() != other.GetSize()) {
+            return false;
+        }
+
+        for (int i = 0; i < this->GetSize(); i++) {
+            if (this->Get(i) != other.Get(i)) {
+                return false;
             }
         }
-        os << "]";
-        return os;
+
+        return true;
     }
+
+    bool operator!=(const Vector<T>& other) const {
+        return !(*this == other);
+    }
+
 };
 
 #endif

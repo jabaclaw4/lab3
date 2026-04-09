@@ -6,6 +6,7 @@
 #include "Vector.h"
 #include "Sequence.h"
 #include "Complex.h"
+#include <type_traits>
 #include "ResultInfo.h"
 
 //базовая реализация вектора
@@ -16,6 +17,11 @@ protected:
 
     virtual VectorBase<T>* CreateNew() const = 0;
     virtual VectorBase<T>* CreateNew(int size) const = 0;
+
+    //добавь getter для data (чтобы можно было вывести)
+    const Sequence<T>* GetData() const {
+        return this->data;
+    }
 
 public:
     VectorBase() : data(nullptr) {}
@@ -88,6 +94,7 @@ public:
         return std::sqrt(sum);
     }
 
+
     T DotProduct(const Vector<T>& other) const override {
         if (this->GetSize() != other.GetSize()) {
             throw std::invalid_argument("vectors must have same size");
@@ -102,20 +109,28 @@ public:
         return sum;
     }
 
+    friend std::ostream& operator<<(std::ostream& os, const VectorBase<T>& vec) {
+        if (vec.data != nullptr) {
+            os << *vec.data;
+        } else {
+            os << "[]";
+        }
+        return os;
+    }
+
+
 private:
-    static double NormHelper(int value) { //NormHelper() возвращает модуль
-//  для int/double → само число
-//  для Complex → |z| = sqrt(a² + b²)
-//иначе norm возвращает не дабл а комплекс а дабл нужен тк нормировка это вещ число
-        return static_cast<double>(value);
-    }
-
-    static double NormHelper(double value) {
-        return value;
-    }
-
-    static double NormHelper(const Complex& value) {
-        return value.Abs();
+private:
+    template <typename U>
+    static double NormHelper(const U& value) {
+        if constexpr (std::is_same_v<U, Complex>) {//проверрка во время компиляции это специализация по другому не получается
+            //потому что нельзя переопределять методы класса вне самого класса
+            //для Complex
+            return value.Abs();
+        } else {
+            //для int, double и остальных
+            return static_cast<double>(value);
+        }
     }
 };
 
