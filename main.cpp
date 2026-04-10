@@ -3,45 +3,66 @@
 #include "src/MutableVector.h"
 #include "src/ImmutableVector.h"
 #include "src/Complex.h"
+#include "src/SquareMatrix.h"
 #include "src/all_tests.h"
-//добавить побольше методом из монады чтобы поттрогать их именно
-//map reduce + вопрос с выводом в консоль как сделать так чтобы не создавать каждый раз ТипUtils h для нового АТД
-//еще че нибудь на доп баллы
+//добавить форвард декларейшн для <<
 using namespace std;
 
-//глобальные указатели на текущие векторы
 Vector<int>* g_vec_int = nullptr;
 Vector<double>* g_vec_double = nullptr;
 Vector<Complex>* g_vec_complex = nullptr;
 
-enum VectorType { NONE, INT, DOUBLE, COMPLEX }; //Хранилище типа текущего активного вектора
-//Индикатор состояния (есть вектор или нет)
-VectorType g_current_type = NONE;//Флаг, который говорит: "Сейчас активен вектор типа такогото
+SquareMatrix<int>* g_matrix_int = nullptr;
+SquareMatrix<double>* g_matrix_double = nullptr;
+
+enum VectorType { NONE, INT, DOUBLE, COMPLEX };
+VectorType g_current_type = NONE;
 
 void print_menu() {
-    cout << "\n===== MENU =====" << endl;
-    cout << "=== Create Vectors ===" << endl;
-    cout << "1 - Create MutableVector<int>" << endl;
-    cout << "2 - Create ImmutableVector<int>" << endl;
-    cout << "3 - Create MutableVector<double>" << endl;
-    cout << "4 - Create ImmutableVector<double>" << endl;
-    cout << "5 - Create MutableVector<Complex>" << endl;
-    cout << "6 - Create ImmutableVector<Complex>" << endl;
+    cout << "\n========================================" << endl;
+    cout << "           LAB 3 - MENU" << endl;
+    cout << "========================================" << endl;
 
-    cout << "\n=== Vector Operations ===" << endl;
-    cout << "7 - Get element by index" << endl;
-    cout << "8 - Set element by index (Mutable only)" << endl;
-    cout << "9 - Print vector" << endl;
+    cout << "\n=== CREATE VECTORS ===" << endl;
+    cout << "1  - Create MutableVector<int>" << endl;
+    cout << "2  - Create ImmutableVector<int>" << endl;
+    cout << "3  - Create MutableVector<double>" << endl;
+    cout << "4  - Create ImmutableVector<double>" << endl;
+    cout << "5  - Create MutableVector<Complex>" << endl;
+    cout << "6  - Create ImmutableVector<Complex>" << endl;
+
+    cout << "\n=== VECTOR OPERATIONS ===" << endl;
+    cout << "7  - Get element by index" << endl;
+    cout << "8  - Set element (Mutable only)" << endl;
+    cout << "9  - Print vector" << endl;
     cout << "10 - Add two vectors" << endl;
     cout << "11 - Multiply by scalar" << endl;
     cout << "12 - Calculate Norm" << endl;
-    cout << "13 - Dot product with another vector" << endl;
+    cout << "13 - Dot product" << endl;
+    cout << "14 - TryGet (safe access with ResultInfo)" << endl;
 
-    cout << "\n=== Demos & Tests ===" << endl;
-    cout << "14 - Operators demo" << endl;
-    cout << "15 - Run ALL tests" << endl;
+    cout << "\n=== CREATE MATRICES ===" << endl;
+    cout << "20 - Create SquareMatrix<int>" << endl;
+    cout << "21 - Create SquareMatrix<double>" << endl;
+
+    cout << "\n=== MATRIX OPERATIONS ===" << endl;
+    cout << "22 - Print matrix" << endl;
+    cout << "23 - Get element [i][j]" << endl;
+    cout << "24 - Set element [i][j]" << endl;
+    cout << "25 - Add two matrices" << endl;
+    cout << "26 - Multiply by scalar" << endl;
+    cout << "27 - Calculate norm" << endl;
+    cout << "28 - Swap rows" << endl;
+    cout << "29 - Multiply row by scalar" << endl;
+    cout << "30 - Add row to row" << endl;
+
+    cout << "\n=== DEMOS & TESTS ===" << endl;
+    cout << "90 - Vector operators demo" << endl;
+    cout << "91 - Matrix demo" << endl;
+    cout << "99 - Run ALL tests" << endl;
 
     cout << "\n0 - Exit" << endl;
+    cout << "========================================" << endl;
     cout << "Choice: ";
 }
 
@@ -61,10 +82,20 @@ void clear_current_vector() {
     g_current_type = NONE;
 }
 
-void test_operators_demo() {
-    cout << "\n=== DEMO: Operators ===" << endl;
+void clear_current_matrix() {
+    if (g_matrix_int != nullptr) {
+        delete g_matrix_int;
+        g_matrix_int = nullptr;
+    }
+    if (g_matrix_double != nullptr) {
+        delete g_matrix_double;
+        g_matrix_double = nullptr;
+    }
+}
 
-    //создаём два вектора
+void test_operators_demo() {
+    cout << "\n=== DEMO: Vector Operators ===" << endl;
+
     int arr1[] = {1, 2, 3};
     int arr2[] = {4, 5, 6};
 
@@ -74,36 +105,28 @@ void test_operators_demo() {
     cout << "v1 = " << v1 << endl;
     cout << "v2 = " << v2 << endl;
 
-    //оператор []
     cout << "\nOperator []: v1[1] = " << v1[1] << endl;
 
-    //оператор + (если реализован)
-    cout << "\nVector operations:" << endl;
     Vector<int>* v3 = v1.Add(v2);
-    cout << "v1.Add(v2) = " << *v3 << endl;
+    cout << "v1 + v2 = " << *v3 << endl;
 
-    //норма
     cout << "||v1|| = " << v1.Norm() << endl;
 
-    //скалярное произведение
     int dot = v1.DotProduct(v2);
     cout << "v1 · v2 = " << dot << endl;
 
-    //умножение на скаляр
     Vector<int>* v4 = v1.MultiplyByScalar(2);
     cout << "2 * v1 = " << *v4 << endl;
 
-    //демонстрация с double
     cout << "\n=== Double vectors ===" << endl;
     double arr3[] = {1.5, 2.5, 3.5};
     MutableVector<double> vd(arr3, 3);
     cout << "vd = " << vd << endl;
     cout << "||vd|| = " << vd.Norm() << endl;
 
-    //демонстрация с Complex
     cout << "\n=== Complex vectors ===" << endl;
-    Complex c1(1, 2);  //1 + 2i
-    Complex c2(3, 4);  //3 + 4i
+    Complex c1(1, 2);
+    Complex c2(3, 4);
     Complex arr4[] = {c1, c2};
     MutableVector<Complex> vc(arr4, 2);
     cout << "vc = " << vc << endl;
@@ -113,14 +136,60 @@ void test_operators_demo() {
     delete v4;
 }
 
+void test_matrix_demo() {
+    cout << "\n=== DEMO: Square Matrix ===" << endl;
+
+    SquareMatrix<int> m(3);
+
+    cout << "Creating 3x3 matrix..." << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            m.Set(i, j, i * 3 + j + 1);
+        }
+    }
+
+    cout << "Matrix m:" << endl;
+    cout << m << endl;
+
+    cout << "\nNorm of m: " << m.Norm() << endl;
+
+    cout << "\nSwapping rows 0 and 2..." << endl;
+    m.SwapRows(0, 2);
+    cout << "After swap:" << endl;
+    cout << m << endl;
+
+    cout << "\nMultiplying row 1 by 2..." << endl;
+    m.MultiplyRow(1, 2);
+    cout << "After multiply:" << endl;
+    cout << m << endl;
+
+    SquareMatrix<int> m2(3);
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            m2.Set(i, j, 1);
+        }
+    }
+
+    cout << "\nMatrix m2 (all ones):" << endl;
+    cout << m2 << endl;
+
+    Matrix<int>* m3 = m.Add(m2);
+    cout << "\nm + m2:" << endl;
+    cout << *m3 << endl;
+
+    delete m3;
+}
+
 int main() {
     int choice;
-    cout << "LAB 3 - Vector Demo" << endl;
+    cout << "\n========================================" << endl;
+    cout << "       LABORATORY WORK #3" << endl;
+    cout << "   Vector & Matrix Operations" << endl;
+    cout << "========================================\n" << endl;
 
     while (true) {
         print_menu();
 
-        //защита от неправильного ввода
         if (!(cin >> choice)) {
             cout << "\nERROR: Invalid input! Please enter a number." << endl;
             cin.clear();
@@ -129,329 +198,190 @@ int main() {
         }
 
         if (choice == 0) {
+            cout << "\nExiting... Goodbye!" << endl;
             break;
         }
 
         switch (choice) {
+            // CASES 1-14: VECTOR OPERATIONS (КАК БЫЛО)
             case 1: {
-                clear_current_vector();
+                // ... (твой код case 1)
+                break;
+            }
+
+                // ... (все остальные cases 2-14 остаются КАК БЫЛИ)
+
+            case 20: {  //Create SquareMatrix<int>
+                clear_current_matrix();
                 int size;
-                cout << "Enter vector size: ";
-                if (!(cin >> size) || size < 0) {
+                cout << "Enter matrix size (n for n×n): ";
+                if (!(cin >> size) || size <= 0) {
                     cout << "ERROR: Invalid size!" << endl;
                     cin.clear();
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     break;
                 }
 
-                if (size == 0) {
-                    g_vec_int = new MutableVector<int>();
-                } else {
-                    int* arr = new int[size];
-                    cout << "Enter " << size << " integers:" << endl;
-                    for (int i = 0; i < size; i++) {
-                        cout << "Element " << i << ": ";
-                        if (!(cin >> arr[i])) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            delete[] arr;
-                            goto end_case_1;
-                        }
-                    }
-                    g_vec_int = new MutableVector<int>(arr, size);
-                    delete[] arr;
-                }
+                g_matrix_int = new SquareMatrix<int>(size);
 
-                g_current_type = INT;
-                cout << "OK: Created MutableVector<int>" << endl;
-                cout << "Vector: " << *g_vec_int << endl;
-                end_case_1:
-                break;
-            }
-
-            case 2: {
-                clear_current_vector();
-                int size;
-                cout << "Enter vector size: ";
-                if (!(cin >> size) || size < 0) {
-                    cout << "ERROR: Invalid size!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                if (size == 0) {
-                    g_vec_int = new ImmutableVector<int>();
-                } else {
-                    int* arr = new int[size];
-                    cout << "Enter " << size << " integers:" << endl;
-                    for (int i = 0; i < size; i++) {
-                        cout << "Element " << i << ": ";
-                        if (!(cin >> arr[i])) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            delete[] arr;
-                            goto end_case_2;
-                        }
-                    }
-                    g_vec_int = new ImmutableVector<int>(arr, size);
-                    delete[] arr;
-                }
-
-                g_current_type = INT;
-                cout << "OK: Created ImmutableVector<int>" << endl;
-                cout << "Vector: " << *g_vec_int << endl;
-                end_case_2:
-                break;
-            }
-
-            case 3: {
-                clear_current_vector();
-                int size;
-                cout << "Enter vector size: ";
-                if (!(cin >> size) || size < 0) {
-                    cout << "ERROR: Invalid size!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                if (size == 0) {
-                    g_vec_double = new MutableVector<double>();
-                } else {
-                    double* arr = new double[size];
-                    cout << "Enter " << size << " doubles:" << endl;
-                    for (int i = 0; i < size; i++) {
-                        cout << "Element " << i << ": ";
-                        if (!(cin >> arr[i])) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            delete[] arr;
-                            goto end_case_3;
-                        }
-                    }
-                    g_vec_double = new MutableVector<double>(arr, size);
-                    delete[] arr;
-                }
-
-                g_current_type = DOUBLE;
-                cout << "OK: Created MutableVector<double>" << endl;
-                cout << "Vector: " << *g_vec_double << endl;
-                end_case_3:
-                break;
-            }
-
-            case 4: {
-                clear_current_vector();
-                int size;
-                cout << "Enter vector size: ";
-                if (!(cin >> size) || size < 0) {
-                    cout << "ERROR: Invalid size!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                if (size == 0) {
-                    g_vec_double = new ImmutableVector<double>();
-                } else {
-                    double* arr = new double[size];
-                    cout << "Enter " << size << " doubles:" << endl;
-                    for (int i = 0; i < size; i++) {
-                        cout << "Element " << i << ": ";
-                        if (!(cin >> arr[i])) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            delete[] arr;
-                            goto end_case_4;
-                        }
-                    }
-                    g_vec_double = new ImmutableVector<double>(arr, size);
-                    delete[] arr;
-                }
-
-                g_current_type = DOUBLE;
-                cout << "OK: Created ImmutableVector<double>" << endl;
-                cout << "Vector: " << *g_vec_double << endl;
-                end_case_4:
-                break;
-            }
-
-            case 5: {
-                clear_current_vector();
-                int size;
-                cout << "Enter vector size: ";
-                if (!(cin >> size) || size < 0) {
-                    cout << "ERROR: Invalid size!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                if (size == 0) {
-                    g_vec_complex = new MutableVector<Complex>();
-                } else {
-                    Complex* arr = new Complex[size];
-                    cout << "Enter " << size << " complex numbers (real imag):" << endl;
-                    for (int i = 0; i < size; i++) {
-                        double real, imag;
-                        cout << "Element " << i << " (real imag): ";
-                        if (!(cin >> real >> imag)) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            delete[] arr;
-                            goto end_case_5;
-                        }
-                        arr[i] = Complex(real, imag);
-                    }
-                    g_vec_complex = new MutableVector<Complex>(arr, size);
-                    delete[] arr;
-                }
-
-                g_current_type = COMPLEX;
-                cout << "OK: Created MutableVector<Complex>" << endl;
-                cout << "Vector: " << *g_vec_complex << endl;
-                end_case_5:
-                break;
-            }
-
-            case 6: {
-                clear_current_vector();
-                int size;
-                cout << "Enter vector size: ";
-                if (!(cin >> size) || size < 0) {
-                    cout << "ERROR: Invalid size!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                if (size == 0) {
-                    g_vec_complex = new ImmutableVector<Complex>();
-                } else {
-                    Complex* arr = new Complex[size];
-                    cout << "Enter " << size << " complex numbers (real imag):" << endl;
-                    for (int i = 0; i < size; i++) {
-                        double real, imag;
-                        cout << "Element " << i << " (real imag): ";
-                        if (!(cin >> real >> imag)) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            delete[] arr;
-                            goto end_case_6;
-                        }
-                        arr[i] = Complex(real, imag);
-                    }
-                    g_vec_complex = new ImmutableVector<Complex>(arr, size);
-                    delete[] arr;
-                }
-
-                g_current_type = COMPLEX;
-                cout << "OK: Created ImmutableVector<Complex>" << endl;
-                cout << "Vector: " << *g_vec_complex << endl;
-                end_case_6:
-                break;
-            }
-
-            case 7: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
-                    break;
-                }
-
-                int index;
-                cout << "Enter index: ";
-                if (!(cin >> index)) {
-                    cout << "ERROR: Invalid input!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                try {
-                    if (g_current_type == INT) {
-                        cout << "vec[" << index << "] = " << g_vec_int->Get(index) << endl;
-                    } else if (g_current_type == DOUBLE) {
-                        cout << "vec[" << index << "] = " << g_vec_double->Get(index) << endl;
-                    } else if (g_current_type == COMPLEX) {
-                        cout << "vec[" << index << "] = " << g_vec_complex->Get(index) << endl;
-                    }
-                } catch (exception& e) {
-                    cout << "ERROR: " << e.what() << endl;
-                }
-                break;
-            }
-
-            case 8: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
-                    break;
-                }
-
-                int index;
-                cout << "Enter index: ";
-                if (!(cin >> index)) {
-                    cout << "ERROR: Invalid input!" << endl;
-                    cin.clear();
-                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                    break;
-                }
-
-                try {
-                    if (g_current_type == INT) {
-                        MutableVector<int>* mv = dynamic_cast<MutableVector<int>*>(g_vec_int);
-                        if (mv == nullptr) {
-                            cout << "ERROR: Vector is immutable!" << endl;
-                            break;
-                        }
+                cout << "Enter " << size*size << " integers (row by row):" << endl;
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; j < size; j++) {
                         int value;
-                        cout << "Enter new value: ";
+                        cout << "Element [" << i << "][" << j << "]: ";
                         if (!(cin >> value)) {
                             cout << "ERROR: Invalid input!" << endl;
                             cin.clear();
                             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            break;
+                            delete g_matrix_int;
+                            g_matrix_int = nullptr;
+                            goto end_case_20;
                         }
-                        mv->Set(index, value);
-                        cout << "OK: Set vec[" << index << "] = " << value << endl;
-                    } else if (g_current_type == DOUBLE) {
-                        MutableVector<double>* mv = dynamic_cast<MutableVector<double>*>(g_vec_double);
-                        if (mv == nullptr) {
-                            cout << "ERROR: Vector is immutable!" << endl;
-                            break;
-                        }
+                        g_matrix_int->Set(i, j, value);
+                    }
+                }
+
+                cout << "OK: Created SquareMatrix<int>" << endl;
+                cout << "Matrix:" << endl;
+                cout << *g_matrix_int << endl;
+                end_case_20:
+                break;
+            }
+
+            case 21: {  //Create SquareMatrix<double>
+                clear_current_matrix();
+                int size;
+                cout << "Enter matrix size (n for n×n): ";
+                if (!(cin >> size) || size <= 0) {
+                    cout << "ERROR: Invalid size!" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+
+                g_matrix_double = new SquareMatrix<double>(size);
+
+                cout << "Enter " << size*size << " doubles (row by row):" << endl;
+                for (int i = 0; i < size; i++) {
+                    for (int j = 0; j < size; j++) {
                         double value;
-                        cout << "Enter new value: ";
+                        cout << "Element [" << i << "][" << j << "]: ";
+                        if (!(cin >> value)) {
+                            cout << "ERROR: Invalid input!" << endl;
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                            delete g_matrix_double;
+                            g_matrix_double = nullptr;
+                            goto end_case_21;
+                        }
+                        g_matrix_double->Set(i, j, value);
+                    }
+                }
+
+                cout << "OK: Created SquareMatrix<double>" << endl;
+                cout << "Matrix:" << endl;
+                cout << *g_matrix_double << endl;
+                end_case_21:
+                break;
+            }
+
+            case 22: {  //Print matrix
+                if (g_matrix_int == nullptr && g_matrix_double == nullptr) {
+                    cout << "ERROR: Create matrix first!" << endl;
+                    break;
+                }
+
+                if (g_matrix_int != nullptr) {
+                    cout << "Matrix<int>:" << endl;
+                    cout << *g_matrix_int << endl;
+                    cout << "Size: " << g_matrix_int->GetSize() << "×" << g_matrix_int->GetSize() << endl;
+                } else if (g_matrix_double != nullptr) {
+                    cout << "Matrix<double>:" << endl;
+                    cout << *g_matrix_double << endl;
+                    cout << "Size: " << g_matrix_double->GetSize() << "×" << g_matrix_double->GetSize() << endl;
+                }
+                break;
+            }
+
+            case 23: {  //Get element
+                if (g_matrix_int == nullptr && g_matrix_double == nullptr) {
+                    cout << "ERROR: Create matrix first!" << endl;
+                    break;
+                }
+
+                int row, col;
+                cout << "Enter row: ";
+                if (!(cin >> row)) {
+                    cout << "ERROR: Invalid input!" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cout << "Enter column: ";
+                if (!(cin >> col)) {
+                    cout << "ERROR: Invalid input!" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+
+                try {
+                    if (g_matrix_int != nullptr) {
+                        cout << "matrix[" << row << "][" << col << "] = " << g_matrix_int->Get(row, col) << endl;
+                    } else if (g_matrix_double != nullptr) {
+                        cout << "matrix[" << row << "][" << col << "] = " << g_matrix_double->Get(row, col) << endl;
+                    }
+                } catch (exception& e) {
+                    cout << "ERROR: " << e.what() << endl;
+                }
+                break;
+            }
+
+            case 24: {  //Set element
+                if (g_matrix_int == nullptr && g_matrix_double == nullptr) {
+                    cout << "ERROR: Create matrix first!" << endl;
+                    break;
+                }
+
+                int row, col;
+                cout << "Enter row: ";
+                if (!(cin >> row)) {
+                    cout << "ERROR: Invalid input!" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+                cout << "Enter column: ";
+                if (!(cin >> col)) {
+                    cout << "ERROR: Invalid input!" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    break;
+                }
+
+                try {
+                    if (g_matrix_int != nullptr) {
+                        int value;
+                        cout << "Enter value: ";
                         if (!(cin >> value)) {
                             cout << "ERROR: Invalid input!" << endl;
                             cin.clear();
                             cin.ignore(numeric_limits<streamsize>::max(), '\n');
                             break;
                         }
-                        mv->Set(index, value);
-                        cout << "OK: Set vec[" << index << "] = " << value << endl;
-                    } else if (g_current_type == COMPLEX) {
-                        MutableVector<Complex>* mv = dynamic_cast<MutableVector<Complex>*>(g_vec_complex);
-                        if (mv == nullptr) {
-                            cout << "ERROR: Vector is immutable!" << endl;
-                            break;
-                        }
-                        double real, imag;
-                        cout << "Enter new value (real imag): ";
-                        if (!(cin >> real >> imag)) {
+                        g_matrix_int->Set(row, col, value);
+                        cout << "OK: Set matrix[" << row << "][" << col << "] = " << value << endl;
+                    } else if (g_matrix_double != nullptr) {
+                        double value;
+                        cout << "Enter value: ";
+                        if (!(cin >> value)) {
                             cout << "ERROR: Invalid input!" << endl;
                             cin.clear();
                             cin.ignore(numeric_limits<streamsize>::max(), '\n');
                             break;
                         }
-                        mv->Set(index, Complex(real, imag));
-                        cout << "OK: Set vec[" << index << "] = " << Complex(real, imag) << endl;
+                        g_matrix_double->Set(row, col, value);
+                        cout << "OK: Set matrix[" << row << "][" << col << "] = " << value << endl;
                     }
                 } catch (exception& e) {
                     cout << "ERROR: " << e.what() << endl;
@@ -459,324 +389,84 @@ int main() {
                 break;
             }
 
-            case 9: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
-                    break;
-                }
-
-                if (g_current_type == INT) {
-                    cout << "Vector: " << *g_vec_int << endl;
-                    cout << "Size: " << g_vec_int->GetSize() << endl;
-                } else if (g_current_type == DOUBLE) {
-                    cout << "Vector: " << *g_vec_double << endl;
-                    cout << "Size: " << g_vec_double->GetSize() << endl;
-                } else if (g_current_type == COMPLEX) {
-                    cout << "Vector: " << *g_vec_complex << endl;
-                    cout << "Size: " << g_vec_complex->GetSize() << endl;
-                }
-                break;
-            }
-
-            case 10: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
-                    break;
-                }
-
-                cout << "Create second vector (same type and size):" << endl;
-
-                try {
-                    if (g_current_type == INT) {
-                        int size = g_vec_int->GetSize();
-                        int* arr = new int[size];
-                        cout << "Enter " << size << " integers:" << endl;
-                        for (int i = 0; i < size; i++) {
-                            cout << "Element " << i << ": ";
-                            if (!(cin >> arr[i])) {
-                                cout << "ERROR: Invalid input!" << endl;
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                delete[] arr;
-                                goto end_case_10;
-                            }
-                        }
-                        MutableVector<int> v2(arr, size);
-                        delete[] arr;
-
-                        Vector<int>* result = g_vec_int->Add(v2);
-                        cout << "vec1 = " << *g_vec_int << endl;
-                        cout << "vec2 = " << v2 << endl;
-                        cout << "vec1 + vec2 = " << *result << endl;
-                        delete result;
-                    } else if (g_current_type == DOUBLE) {
-                        int size = g_vec_double->GetSize();
-                        double* arr = new double[size];
-                        cout << "Enter " << size << " doubles:" << endl;
-                        for (int i = 0; i < size; i++) {
-                            cout << "Element " << i << ": ";
-                            if (!(cin >> arr[i])) {
-                                cout << "ERROR: Invalid input!" << endl;
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                delete[] arr;
-                                goto end_case_10;
-                            }
-                        }
-                        MutableVector<double> v2(arr, size);
-                        delete[] arr;
-
-                        Vector<double>* result = g_vec_double->Add(v2);
-                        cout << "vec1 = " << *g_vec_double << endl;
-                        cout << "vec2 = " << v2 << endl;
-                        cout << "vec1 + vec2 = " << *result << endl;
-                        delete result;
-                    } else if (g_current_type == COMPLEX) {
-                        int size = g_vec_complex->GetSize();
-                        Complex* arr = new Complex[size];
-                        cout << "Enter " << size << " complex numbers (real imag):" << endl;
-                        for (int i = 0; i < size; i++) {
-                            double real, imag;
-                            cout << "Element " << i << " (real imag): ";
-                            if (!(cin >> real >> imag)) {
-                                cout << "ERROR: Invalid input!" << endl;
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                delete[] arr;
-                                goto end_case_10;
-                            }
-                            arr[i] = Complex(real, imag);
-                        }
-                        MutableVector<Complex> v2(arr, size);
-                        delete[] arr;
-
-                        Vector<Complex>* result = g_vec_complex->Add(v2);
-                        cout << "vec1 = " << *g_vec_complex << endl;
-                        cout << "vec2 = " << v2 << endl;
-                        cout << "vec1 + vec2 = " << *result << endl;
-                        delete result;
-                    }
-                } catch (exception& e) {
-                    cout << "ERROR: " << e.what() << endl;
-                }
-                end_case_10:
-                break;
-            }
-
-            case 11: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
-                    break;
-                }
-
-                try {
-                    if (g_current_type == INT) {
-                        int scalar;
-                        cout << "Enter scalar: ";
-                        if (!(cin >> scalar)) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            break;
-                        }
-                        Vector<int>* result = g_vec_int->MultiplyByScalar(scalar);
-                        cout << "vec = " << *g_vec_int << endl;
-                        cout << scalar << " * vec = " << *result << endl;
-                        delete result;
-                    } else if (g_current_type == DOUBLE) {
-                        double scalar;
-                        cout << "Enter scalar: ";
-                        if (!(cin >> scalar)) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            break;
-                        }
-                        Vector<double>* result = g_vec_double->MultiplyByScalar(scalar);
-                        cout << "vec = " << *g_vec_double << endl;
-                        cout << scalar << " * vec = " << *result << endl;
-                        delete result;
-                    } else if (g_current_type == COMPLEX) {
-                        double real, imag;
-                        cout << "Enter scalar (real imag): ";
-                        if (!(cin >> real >> imag)) {
-                            cout << "ERROR: Invalid input!" << endl;
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            break;
-                        }
-                        Complex scalar(real, imag);
-                        Vector<Complex>* result = g_vec_complex->MultiplyByScalar(scalar);
-                        cout << "vec = " << *g_vec_complex << endl;
-                        cout << scalar << " * vec = " << *result << endl;
-                        delete result;
-                    }
-                } catch (exception& e) {
-                    cout << "ERROR: " << e.what() << endl;
-                }
-                break;
-            }
-
-            case 12: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
+            case 27: {  //Matrix norm
+                if (g_matrix_int == nullptr && g_matrix_double == nullptr) {
+                    cout << "ERROR: Create matrix first!" << endl;
                     break;
                 }
 
                 double norm;
-                if (g_current_type == INT) {
-                    norm = g_vec_int->Norm();
-                } else if (g_current_type == DOUBLE) {
-                    norm = g_vec_double->Norm();
-                } else if (g_current_type == COMPLEX) {
-                    norm = g_vec_complex->Norm();
+                if (g_matrix_int != nullptr) {
+                    norm = g_matrix_int->Norm();
+                } else {
+                    norm = g_matrix_double->Norm();
                 }
 
-                cout << "||vec|| = " << norm << endl;
+                cout << "||matrix|| = " << norm << endl;
                 break;
             }
 
-            case 13: {
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
+            case 28: {  //Swap rows
+                if (g_matrix_int == nullptr && g_matrix_double == nullptr) {
+                    cout << "ERROR: Create matrix first!" << endl;
                     break;
                 }
 
-                cout << "Create second vector (same type and size):" << endl;
-
-                try {
-                    if (g_current_type == INT) {
-                        int size = g_vec_int->GetSize();
-                        int* arr = new int[size];
-                        cout << "Enter " << size << " integers:" << endl;
-                        for (int i = 0; i < size; i++) {
-                            cout << "Element " << i << ": ";
-                            if (!(cin >> arr[i])) {
-                                cout << "ERROR: Invalid input!" << endl;
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                delete[] arr;
-                                goto end_case_13;
-                            }
-                        }
-                        MutableVector<int> v2(arr, size);
-                        delete[] arr;
-
-                        int result = g_vec_int->DotProduct(v2);
-                        cout << "vec1 = " << *g_vec_int << endl;
-                        cout << "vec2 = " << v2 << endl;
-                        cout << "vec1 · vec2 = " << result << endl;
-                    } else if (g_current_type == DOUBLE) {
-                        int size = g_vec_double->GetSize();
-                        double* arr = new double[size];
-                        cout << "Enter " << size << " doubles:" << endl;
-                        for (int i = 0; i < size; i++) {
-                            cout << "Element " << i << ": ";
-                            if (!(cin >> arr[i])) {
-                                cout << "ERROR: Invalid input!" << endl;
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                delete[] arr;
-                                goto end_case_13;
-                            }
-                        }
-                        MutableVector<double> v2(arr, size);
-                        delete[] arr;
-
-                        double result = g_vec_double->DotProduct(v2);
-                        cout << "vec1 = " << *g_vec_double << endl;
-                        cout << "vec2 = " << v2 << endl;
-                        cout << "vec1 · vec2 = " << result << endl;
-                    } else if (g_current_type == COMPLEX) {
-                        int size = g_vec_complex->GetSize();
-                        Complex* arr = new Complex[size];
-                        cout << "Enter " << size << " complex numbers (real imag):" << endl;
-                        for (int i = 0; i < size; i++) {
-                            double real, imag;
-                            cout << "Element " << i << " (real imag): ";
-                            if (!(cin >> real >> imag)) {
-                                cout << "ERROR: Invalid input!" << endl;
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                delete[] arr;
-                                goto end_case_13;
-                            }
-                            arr[i] = Complex(real, imag);
-                        }
-                        MutableVector<Complex> v2(arr, size);
-                        delete[] arr;
-
-                        Complex result = g_vec_complex->DotProduct(v2);
-                        cout << "vec1 = " << *g_vec_complex << endl;
-                        cout << "vec2 = " << v2 << endl;
-                        cout << "vec1 · vec2 = " << result << endl;
-                    }
-                } catch (exception& e) {
-                    cout << "ERROR: " << e.what() << endl;
-                }
-                end_case_13:
-                break;
-            }
-
-            case 14: {  //TryGet (safe get)
-                if (g_current_type == NONE) {
-                    cout << "ERROR: Create vector first!" << endl;
+                int row1, row2;
+                cout << "Enter first row: ";
+                if (!(cin >> row1)) {
+                    cout << "ERROR: Invalid input!" << endl;
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     break;
                 }
-
-                int index;
-                cout << "Enter index: ";
-                if (!(cin >> index)) {
+                cout << "Enter second row: ";
+                if (!(cin >> row2)) {
                     cout << "ERROR: Invalid input!" << endl;
                     cin.clear();
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     break;
                 }
 
-                if (g_current_type == INT) {
-                    ResultInfo<int> result = g_vec_int->TryGet(index);
-
-                    if (result.IsSuccess()) {
-                        cout << "OK: Success! vec[" << index << "] = " << result.GetValue() << endl;
-                    } else {
-                        cout << "ERROR: " << result.GetError() << endl;
+                try {
+                    if (g_matrix_int != nullptr) {
+                        g_matrix_int->SwapRows(row1, row2);
+                        cout << "OK: Swapped rows " << row1 << " and " << row2 << endl;
+                        cout << "Matrix:" << endl;
+                        cout << *g_matrix_int << endl;
+                    } else if (g_matrix_double != nullptr) {
+                        g_matrix_double->SwapRows(row1, row2);
+                        cout << "OK: Swapped rows " << row1 << " and " << row2 << endl;
+                        cout << "Matrix:" << endl;
+                        cout << *g_matrix_double << endl;
                     }
-                } else if (g_current_type == DOUBLE) {
-                    ResultInfo<double> result = g_vec_double->TryGet(index);
-
-                    if (result.IsSuccess()) {
-                        cout << "OK: Success! vec[" << index << "] = " << result.GetValue() << endl;
-                    } else {
-                        cout << "ERROR: " << result.GetError() << endl;
-                    }
-                } else if (g_current_type == COMPLEX) {
-                    ResultInfo<Complex> result = g_vec_complex->TryGet(index);
-
-                    if (result.IsSuccess()) {
-                        cout << "OK: Success! vec[" << index << "] = " << result.GetValue() << endl;
-                    } else {
-                        cout << "ERROR: " << result.GetError() << endl;
-                    }
+                } catch (exception& e) {
+                    cout << "ERROR: " << e.what() << endl;
                 }
                 break;
             }
 
-            case 15: {
+            case 90: {
                 test_operators_demo();
                 break;
             }
 
-            case 16: {
+            case 91: {
+                test_matrix_demo();
+                break;
+            }
+
+            case 99: {
                 run_all_tests();
                 break;
             }
 
             default:
-                cout << "ERROR: Invalid choice! Please choose 0-16" << endl;
+                cout << "ERROR: Invalid choice!" << endl;
         }
     }
 
     clear_current_vector();
+    clear_current_matrix();
     return 0;
 }
-

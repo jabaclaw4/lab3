@@ -4,19 +4,18 @@
 #include <iostream>
 #include "Sequence.h"
 
-//cout << seq
-//выводит в формате [1, 2, 3]
+//оператор << для Sequence
 template <class T>
-std::ostream& operator<<(std::ostream& os, const Sequence<T>& seq) {//ostream& = ссылка на поток
+std::ostream& operator<<(std::ostream& os, const Sequence<T>& seq) {
     os << "[";
     for (int i = 0; i < seq.GetLength(); i++) {
         os << seq[i];
-        if (i < seq.GetLength() - 1) {//везде запятая кроме последнего
+        if (i < seq.GetLength() - 1) {
             os << ", ";
         }
     }
     os << "]";
-    return os;//для цепочек
+    return os;
 }
 
 #endif
