@@ -8,6 +8,7 @@
 #include "Complex.h"
 #include <type_traits>
 #include "ResultInfo.h"
+#include <iostream>
 
 //базовая реализация вектора
 template <class T>

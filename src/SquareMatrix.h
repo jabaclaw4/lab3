@@ -15,7 +15,7 @@ public:
     //виртуальный деструктор
     virtual ~SquareMatrix() = default;
 
-    //норма Фробениуса
+    //норма Фробениуса (корень из суммы квадратов всех элементов)
     double Norm() const {
         double sum = 0.0;
 
@@ -31,7 +31,7 @@ public:
         return std::sqrt(sum);
     }
 
-    //✅ БЕЗ КОСТЫЛЯ: поменять указатели на строки
+    //ЭЛЕМЕНТАРНЫЕ ПРЕОБРАЗОВАНИЯ СТРОК:
     void SwapRows(int row1, int row2) {
         int size = this->GetRows();
 
@@ -39,12 +39,9 @@ public:
             throw std::out_of_range("row index out of range");
         }
 
-        //✅ ПРЯМОЙ доступ к rows (protected поле)
-        MutableVector<T>* temp = this->rows->Get(row1);
-
-        //✅ ИСПОЛЬЗУЕМ operator[] вместо Set()!
-        (*this->rows)[row1] = this->rows->Get(row2);
-        (*this->rows)[row2] = temp;
+        DynamicArray<T>* temp = this->rows->Get(row1);
+        this->rows->Set(row1, this->rows->Get(row2));
+        this->rows->Set(row2, temp);
     }
 
     //умножить строку на скаляр
@@ -75,6 +72,8 @@ public:
             this->Set(targetRow, j, targetValue + sourceValue * scalar);
         }
     }
+
+    //ЭЛЕМЕНТАРНЫЕ ПРЕОБРАЗОВАНИЯ СТОЛБЦОВ:
 
     //поменять два столбца местами
     void SwapCols(int col1, int col2) {
@@ -120,7 +119,7 @@ public:
         }
     }
 
-    //получить размер
+    //получить размер (квадратная, поэтому rows == cols)
     int GetSize() const {
         return this->GetRows();
     }

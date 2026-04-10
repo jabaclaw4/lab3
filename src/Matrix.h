@@ -1,15 +1,15 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-#include "MutableVector.h"
+#include "DynamicArray.h"
 #include <stdexcept>
 #include <iostream>
 
-//матрица на базе Vector<Vector<T>*> (вектор указателей на векторы)
+//матрица на базе DynamicArray<DynamicArray<T>*>
 template <class T>
 class Matrix {
-protected:  //чтобы наследники могли использовать
-    MutableVector<MutableVector<T>*>* rows; //указатель на вектор указателей на векторы элементов T
+protected:  //protected чтобы наследники могли использовать
+    DynamicArray<DynamicArray<T>*>* rows;  //массив указателей на строки
     int numRows;
     int numCols;
 
@@ -20,16 +20,21 @@ public:
             throw std::invalid_argument("matrix dimensions must be positive");
         }
 
-        //создаём вектор указателей на строки
-        this->rows = new MutableVector<MutableVector<T>*>(rows);
+        //создаём массив указателей на строки
+        this->rows = new DynamicArray<DynamicArray<T>*>(rows);
 
         //создаём каждую строку
         for (int i = 0; i < rows; i++) {
-            MutableVector<T>* row = new MutableVector<T>(cols);
+            DynamicArray<T>* row = new DynamicArray<T>(cols);
+            //инициализируем нулями
+            for (int j = 0; j < cols; j++) {
+                row->Set(j, T());  //T() = 0 для int/double
+            }
             this->rows->Set(i, row);
         }
     }
 
+    //виртуальный деструктор
     virtual ~Matrix() {
         //удаляем каждую строку
         for (int i = 0; i < numRows; i++) {
@@ -38,6 +43,7 @@ public:
         delete this->rows;
     }
 
+    //получить элемент
     virtual T Get(int row, int col) const {
         if (row < 0 || row >= numRows || col < 0 || col >= numCols) {
             throw std::out_of_range("matrix index out of range");
@@ -46,6 +52,7 @@ public:
         return this->rows->Get(row)->Get(col);
     }
 
+    //установить элемент
     virtual void Set(int row, int col, const T& value) {
         if (row < 0 || row >= numRows || col < 0 || col >= numCols) {
             throw std::out_of_range("matrix index out of range");
@@ -54,7 +61,7 @@ public:
         this->rows->Get(row)->Set(col, value);
     }
 
-    //виртуальное сложение
+    //сложение матриц
     virtual Matrix<T>* Add(const Matrix<T>& other) const {
         if (this->numRows != other.numRows || this->numCols != other.numCols) {
             throw std::invalid_argument("matrices must have same dimensions");
@@ -88,10 +95,27 @@ public:
 
     //вывод
     friend std::ostream& operator<<(std::ostream& os, const Matrix<T>& matrix) {
-        os << "[" << std::endl;
+        os << "[";
+
         for (int i = 0; i < matrix.numRows; i++) {
-            os << "  " << *(matrix.rows->Get(i)) << std::endl;
+            if (i > 0) {
+                os << " ";  //отступ для строк после первой
+            }
+
+            os << "[";
+            for (int j = 0; j < matrix.numCols; j++) {
+                os << matrix.Get(i, j);
+                if (j < matrix.numCols - 1) {
+                    os << ", ";
+                }
+            }
+            os << "]";
+
+            if (i < matrix.numRows - 1) {
+                os << std::endl;  //перевод строки между строками
+            }
         }
+
         os << "]";
         return os;
     }

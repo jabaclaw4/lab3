@@ -1,7 +1,7 @@
 #include <iostream>
-#include <cmath>  //✅ ДОБАВЬ для fabs
+#include <cmath>
 #include "../src/SquareMatrix.h"
-#include "../src/test_utils.h"  //✅ ИСПРАВЛЕНО: без ../src/
+#include "../src/test_utils.h"
 
 using namespace std;
 
