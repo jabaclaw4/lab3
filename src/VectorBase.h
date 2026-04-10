@@ -19,11 +19,6 @@ protected:
     virtual VectorBase<T>* CreateNew() const = 0;
     virtual VectorBase<T>* CreateNew(int size) const = 0;
 
-    //добавь getter для data (чтобы можно было вывести)
-    const Sequence<T>* GetData() const {
-        return this->data;
-    }
-
 public:
     VectorBase() : data(nullptr) {}
 
@@ -110,17 +105,7 @@ public:
         return sum;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const VectorBase<T>& vec) {
-        if (vec.data != nullptr) {
-            os << *vec.data;
-        } else {
-            os << "[]";
-        }
-        return os;
-    }
 
-
-private:
 private:
     template <typename U>
     static double NormHelper(const U& value) {

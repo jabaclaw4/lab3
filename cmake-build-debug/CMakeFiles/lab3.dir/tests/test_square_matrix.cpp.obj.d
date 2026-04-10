@@ -1,5 +1,5 @@
-CMakeFiles/lab2.dir/tests/test_vector.cpp.obj: \
- C:\Users\User\CLionProjects\lab3\tests\test_vector.cpp \
+CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: \
+ C:\Users\User\CLionProjects\lab3\tests\test_square_matrix.cpp \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -158,16 +158,7 @@ CMakeFiles/lab2.dir/tests/test_vector.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
- C:/Users/User/CLionProjects/lab3/src/MutableVector.h \
- C:/Users/User/CLionProjects/lab3/src/VectorBase.h \
- C:/Users/User/CLionProjects/lab3/src/Vector.h \
- C:/Users/User/CLionProjects/lab3/src/ResultInfo.h \
- C:/Users/User/CLionProjects/lab3/src/Sequence.h \
- C:/Users/User/CLionProjects/lab3/src/Complex.h \
- C:/Users/User/CLionProjects/lab3/src/MutableArraySequence.h \
- C:/Users/User/CLionProjects/lab3/src/ArraySequenceBase.h \
+ C:/Users/User/CLionProjects/lab3/src/SquareMatrix.h \
+ C:/Users/User/CLionProjects/lab3/src/Matrix.h \
  C:/Users/User/CLionProjects/lab3/src/DynamicArray.h \
- C:/Users/User/CLionProjects/lab3/src/ImmutableVector.h \
- C:/Users/User/CLionProjects/lab3/src/ImmutableArraySequence.h \
- C:/Users/User/CLionProjects/lab3/src/Complex.h \
  C:/Users/User/CLionProjects/lab3/src/test_utils.h

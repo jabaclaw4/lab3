@@ -727,7 +727,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/lab2"
+			"value" : "C:/Program Files (x86)/lab3"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -947,7 +947,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "lab2"
+			"value" : "lab3"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1354,7 +1354,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "lab2_BINARY_DIR",
+			"name" : "lab3_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1366,7 +1366,7 @@
 			"value" : "C:/Users/User/CLionProjects/lab3/cmake-build-debug"
 		},
 		{
-			"name" : "lab2_IS_TOP_LEVEL",
+			"name" : "lab3_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1378,7 +1378,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "lab2_SOURCE_DIR",
+			"name" : "lab3_SOURCE_DIR",
 			"properties" : 
 			[
 				{

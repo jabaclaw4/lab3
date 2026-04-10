@@ -1,5 +1,5 @@
-CMakeFiles/lab2.dir/tests/test_result_info.cpp.obj: \
- C:\Users\User\CLionProjects\lab3\tests\test_result_info.cpp \
+CMakeFiles/lab3.dir/tests/test_complex.cpp.obj: \
+ C:\Users\User\CLionProjects\lab3\tests\test_complex.cpp \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -142,8 +142,7 @@ CMakeFiles/lab2.dir/tests/test_result_info.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:/Users/User/CLionProjects/lab3/src/MutableVector.h \
- C:/Users/User/CLionProjects/lab3/src/VectorBase.h \
+ C:/Users/User/CLionProjects/lab3/src/Complex.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/x86_64-w64-mingw32/include/math.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
@@ -160,14 +159,4 @@ CMakeFiles/lab2.dir/tests/test_result_info.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
- C:/Users/User/CLionProjects/lab3/src/Vector.h \
- C:/Users/User/CLionProjects/lab3/src/ResultInfo.h \
- C:/Users/User/CLionProjects/lab3/src/Sequence.h \
- C:/Users/User/CLionProjects/lab3/src/Complex.h \
- C:/Users/User/CLionProjects/lab3/src/MutableArraySequence.h \
- C:/Users/User/CLionProjects/lab3/src/ArraySequenceBase.h \
- C:/Users/User/CLionProjects/lab3/src/DynamicArray.h \
- C:/Users/User/CLionProjects/lab3/src/ImmutableVector.h \
- C:/Users/User/CLionProjects/lab3/src/ImmutableArraySequence.h \
- C:/Users/User/CLionProjects/lab3/src/ResultInfo.h \
  C:/Users/User/CLionProjects/lab3/src/test_utils.h

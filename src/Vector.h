@@ -2,7 +2,11 @@
 #define VECTOR_H
 
 #include "ResultInfo.h"
-#include <iostream>
+//forward declaration
+template <class T> class Vector;
+
+template <class T>
+std::ostream& operator<<(std::ostream& os, const Vector<T>& vec);
 
 template <class T>
 class Vector {
@@ -53,18 +57,21 @@ public:
         return !(*this == other);
     }
 
-    //✅ operator<< ИСПОЛЬЗУЕТ ТОЛЬКО ПУБЛИЧНЫЙ ИНТЕРФЕЙС
-    friend std::ostream& operator<<(std::ostream& os, const Vector<T>& vec) {
-        os << "[";
-        for (int i = 0; i < vec.GetSize(); i++) {
-            os << vec.Get(i);
-            if (i < vec.GetSize() - 1) {
-                os << ", ";
-            }
-        }
-        os << "]";
-        return os;
-    }
+    //связь с объявлением выше шаблонная функция может использовать приватные поля френд
+    friend std::ostream& operator<< <>(std::ostream& os, const Vector<T>& vec);
 };
+
+template <class T>
+std::ostream& operator<<(std::ostream& os, const Vector<T>& vec) {
+    os << "[";
+    for (int i = 0; i < vec.GetSize(); i++) {
+        os << vec.Get(i);
+        if (i < vec.GetSize() - 1) {
+            os << ", ";
+        }
+    }
+    os << "]";
+    return os;
+}
 
 #endif

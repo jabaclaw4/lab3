@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab2
+# Target rules for targets named lab3
 
 # Build rule for target.
-lab2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab2
-.PHONY : lab2
+lab3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lab3
+.PHONY : lab3
 
 # fast build rule for target.
-lab2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/build
-.PHONY : lab2/fast
+lab3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/build
+.PHONY : lab3/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -141,7 +141,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -149,7 +149,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 tests/run_all_tests.obj: tests/run_all_tests.cpp.obj
@@ -157,7 +157,7 @@ tests/run_all_tests.obj: tests/run_all_tests.cpp.obj
 
 # target to build an object file
 tests/run_all_tests.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/run_all_tests.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj
 .PHONY : tests/run_all_tests.cpp.obj
 
 tests/run_all_tests.i: tests/run_all_tests.cpp.i
@@ -165,7 +165,7 @@ tests/run_all_tests.i: tests/run_all_tests.cpp.i
 
 # target to preprocess a source file
 tests/run_all_tests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/run_all_tests.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/run_all_tests.cpp.i
 .PHONY : tests/run_all_tests.cpp.i
 
 tests/run_all_tests.s: tests/run_all_tests.cpp.s
@@ -173,7 +173,7 @@ tests/run_all_tests.s: tests/run_all_tests.cpp.s
 
 # target to generate assembly for a file
 tests/run_all_tests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/run_all_tests.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/run_all_tests.cpp.s
 .PHONY : tests/run_all_tests.cpp.s
 
 tests/test_complex.obj: tests/test_complex.cpp.obj
@@ -181,7 +181,7 @@ tests/test_complex.obj: tests/test_complex.cpp.obj
 
 # target to build an object file
 tests/test_complex.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_complex.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_complex.cpp.obj
 .PHONY : tests/test_complex.cpp.obj
 
 tests/test_complex.i: tests/test_complex.cpp.i
@@ -189,7 +189,7 @@ tests/test_complex.i: tests/test_complex.cpp.i
 
 # target to preprocess a source file
 tests/test_complex.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_complex.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_complex.cpp.i
 .PHONY : tests/test_complex.cpp.i
 
 tests/test_complex.s: tests/test_complex.cpp.s
@@ -197,15 +197,39 @@ tests/test_complex.s: tests/test_complex.cpp.s
 
 # target to generate assembly for a file
 tests/test_complex.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_complex.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_complex.cpp.s
 .PHONY : tests/test_complex.cpp.s
+
+tests/test_matrix.obj: tests/test_matrix.cpp.obj
+.PHONY : tests/test_matrix.obj
+
+# target to build an object file
+tests/test_matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj
+.PHONY : tests/test_matrix.cpp.obj
+
+tests/test_matrix.i: tests/test_matrix.cpp.i
+.PHONY : tests/test_matrix.i
+
+# target to preprocess a source file
+tests/test_matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_matrix.cpp.i
+.PHONY : tests/test_matrix.cpp.i
+
+tests/test_matrix.s: tests/test_matrix.cpp.s
+.PHONY : tests/test_matrix.s
+
+# target to generate assembly for a file
+tests/test_matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_matrix.cpp.s
+.PHONY : tests/test_matrix.cpp.s
 
 tests/test_result_info.obj: tests/test_result_info.cpp.obj
 .PHONY : tests/test_result_info.obj
 
 # target to build an object file
 tests/test_result_info.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_result_info.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj
 .PHONY : tests/test_result_info.cpp.obj
 
 tests/test_result_info.i: tests/test_result_info.cpp.i
@@ -213,7 +237,7 @@ tests/test_result_info.i: tests/test_result_info.cpp.i
 
 # target to preprocess a source file
 tests/test_result_info.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_result_info.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_result_info.cpp.i
 .PHONY : tests/test_result_info.cpp.i
 
 tests/test_result_info.s: tests/test_result_info.cpp.s
@@ -221,15 +245,39 @@ tests/test_result_info.s: tests/test_result_info.cpp.s
 
 # target to generate assembly for a file
 tests/test_result_info.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_result_info.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_result_info.cpp.s
 .PHONY : tests/test_result_info.cpp.s
+
+tests/test_square_matrix.obj: tests/test_square_matrix.cpp.obj
+.PHONY : tests/test_square_matrix.obj
+
+# target to build an object file
+tests/test_square_matrix.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj
+.PHONY : tests/test_square_matrix.cpp.obj
+
+tests/test_square_matrix.i: tests/test_square_matrix.cpp.i
+.PHONY : tests/test_square_matrix.i
+
+# target to preprocess a source file
+tests/test_square_matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.i
+.PHONY : tests/test_square_matrix.cpp.i
+
+tests/test_square_matrix.s: tests/test_square_matrix.cpp.s
+.PHONY : tests/test_square_matrix.s
+
+# target to generate assembly for a file
+tests/test_square_matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.s
+.PHONY : tests/test_square_matrix.cpp.s
 
 tests/test_utils.obj: tests/test_utils.cpp.obj
 .PHONY : tests/test_utils.obj
 
 # target to build an object file
 tests/test_utils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_utils.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_utils.cpp.obj
 .PHONY : tests/test_utils.cpp.obj
 
 tests/test_utils.i: tests/test_utils.cpp.i
@@ -237,7 +285,7 @@ tests/test_utils.i: tests/test_utils.cpp.i
 
 # target to preprocess a source file
 tests/test_utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_utils.cpp.i
 .PHONY : tests/test_utils.cpp.i
 
 tests/test_utils.s: tests/test_utils.cpp.s
@@ -245,7 +293,7 @@ tests/test_utils.s: tests/test_utils.cpp.s
 
 # target to generate assembly for a file
 tests/test_utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_utils.cpp.s
 .PHONY : tests/test_utils.cpp.s
 
 tests/test_vector.obj: tests/test_vector.cpp.obj
@@ -253,7 +301,7 @@ tests/test_vector.obj: tests/test_vector.cpp.obj
 
 # target to build an object file
 tests/test_vector.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_vector.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector.cpp.obj
 .PHONY : tests/test_vector.cpp.obj
 
 tests/test_vector.i: tests/test_vector.cpp.i
@@ -261,7 +309,7 @@ tests/test_vector.i: tests/test_vector.cpp.i
 
 # target to preprocess a source file
 tests/test_vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_vector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector.cpp.i
 .PHONY : tests/test_vector.cpp.i
 
 tests/test_vector.s: tests/test_vector.cpp.s
@@ -269,7 +317,7 @@ tests/test_vector.s: tests/test_vector.cpp.s
 
 # target to generate assembly for a file
 tests/test_vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab2.dir\build.make CMakeFiles/lab2.dir/tests/test_vector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector.cpp.s
 .PHONY : tests/test_vector.cpp.s
 
 # Help Target
@@ -280,7 +328,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... lab2
+	@echo ... lab3
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -290,9 +338,15 @@ help:
 	@echo ... tests/test_complex.obj
 	@echo ... tests/test_complex.i
 	@echo ... tests/test_complex.s
+	@echo ... tests/test_matrix.obj
+	@echo ... tests/test_matrix.i
+	@echo ... tests/test_matrix.s
 	@echo ... tests/test_result_info.obj
 	@echo ... tests/test_result_info.i
 	@echo ... tests/test_result_info.s
+	@echo ... tests/test_square_matrix.obj
+	@echo ... tests/test_square_matrix.i
+	@echo ... tests/test_square_matrix.s
 	@echo ... tests/test_utils.obj
 	@echo ... tests/test_utils.i
 	@echo ... tests/test_utils.s

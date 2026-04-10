@@ -1,6 +1,5 @@
-CMakeFiles/lab2.dir/tests/test_utils.cpp.obj: \
- C:\Users\User\CLionProjects\lab3\tests\test_utils.cpp \
- C:/Users/User/CLionProjects/lab3/src/test_utils.h \
+CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: \
+ C:\Users\User\CLionProjects\lab3\tests\test_matrix.cpp \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -142,4 +141,7 @@ CMakeFiles/lab2.dir/tests/test_utils.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
- C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc
+ C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:/Users/User/CLionProjects/lab3/src/Matrix.h \
+ C:/Users/User/CLionProjects/lab3/src/DynamicArray.h \
+ C:/Users/User/CLionProjects/lab3/src/test_utils.h
