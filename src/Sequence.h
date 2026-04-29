@@ -139,6 +139,8 @@ public:
     Sequence<T>* operator+(const Sequence<T>& other) const {
         return this->Concat(&other);
     }
+
+    virtual Sequence<T>* Where(bool (*predicate)(T)) const = 0;
 };
 
 #endif

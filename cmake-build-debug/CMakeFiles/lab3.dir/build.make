@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion2024.1.4\bin\cmake\win\x64\bin\cmake.exe" 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\User\CLionProjects\lab3
+CMAKE_SOURCE_DIR = C:\Users\jabaclaw4\CLionProjects\lab3n
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\User\CLionProjects\lab3\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab3.dir/depend.make
@@ -69,116 +69,116 @@ include CMakeFiles/lab3.dir/progress.make
 include CMakeFiles/lab3.dir/flags.make
 
 CMakeFiles/lab3.dir/main.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/main.cpp.obj: C:/Users/User/CLionProjects/lab3/main.cpp
+CMakeFiles/lab3.dir/main.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/main.cpp
 CMakeFiles/lab3.dir/main.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab3.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/main.cpp.obj -MF CMakeFiles\lab3.dir\main.cpp.obj.d -o CMakeFiles\lab3.dir\main.cpp.obj -c C:\Users\User\CLionProjects\lab3\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab3.dir/main.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/main.cpp.obj -MF CMakeFiles\lab3.dir\main.cpp.obj.d -o CMakeFiles\lab3.dir\main.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\main.cpp
 
 CMakeFiles/lab3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\main.cpp > CMakeFiles\lab3.dir\main.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\main.cpp > CMakeFiles\lab3.dir\main.cpp.i
 
 CMakeFiles/lab3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\main.cpp -o CMakeFiles\lab3.dir\main.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\main.cpp -o CMakeFiles\lab3.dir\main.cpp.s
 
 CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/run_all_tests.cpp
+CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/run_all_tests.cpp
 CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj -MF CMakeFiles\lab3.dir\tests\run_all_tests.cpp.obj.d -o CMakeFiles\lab3.dir\tests\run_all_tests.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\run_all_tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/run_all_tests.cpp.obj -MF CMakeFiles\lab3.dir\tests\run_all_tests.cpp.obj.d -o CMakeFiles\lab3.dir\tests\run_all_tests.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\run_all_tests.cpp
 
 CMakeFiles/lab3.dir/tests/run_all_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/run_all_tests.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\run_all_tests.cpp > CMakeFiles\lab3.dir\tests\run_all_tests.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\run_all_tests.cpp > CMakeFiles\lab3.dir\tests\run_all_tests.cpp.i
 
 CMakeFiles/lab3.dir/tests/run_all_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/run_all_tests.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\run_all_tests.cpp -o CMakeFiles\lab3.dir\tests\run_all_tests.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\run_all_tests.cpp -o CMakeFiles\lab3.dir\tests\run_all_tests.cpp.s
 
 CMakeFiles/lab3.dir/tests/test_utils.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/test_utils.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/test_utils.cpp
+CMakeFiles/lab3.dir/tests/test_utils.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_utils.cpp
 CMakeFiles/lab3.dir/tests/test_utils.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab3.dir/tests/test_utils.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_utils.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_utils.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_utils.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\test_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab3.dir/tests/test_utils.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_utils.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_utils.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_utils.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_utils.cpp
 
 CMakeFiles/lab3.dir/tests/test_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_utils.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\test_utils.cpp > CMakeFiles\lab3.dir\tests\test_utils.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_utils.cpp > CMakeFiles\lab3.dir\tests\test_utils.cpp.i
 
 CMakeFiles/lab3.dir/tests/test_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_utils.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\test_utils.cpp -o CMakeFiles\lab3.dir\tests\test_utils.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_utils.cpp -o CMakeFiles\lab3.dir\tests\test_utils.cpp.s
 
 CMakeFiles/lab3.dir/tests/test_complex.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/test_complex.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/test_complex.cpp
+CMakeFiles/lab3.dir/tests/test_complex.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_complex.cpp
 CMakeFiles/lab3.dir/tests/test_complex.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab3.dir/tests/test_complex.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_complex.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_complex.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_complex.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\test_complex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab3.dir/tests/test_complex.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_complex.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_complex.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_complex.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_complex.cpp
 
 CMakeFiles/lab3.dir/tests/test_complex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_complex.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\test_complex.cpp > CMakeFiles\lab3.dir\tests\test_complex.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_complex.cpp > CMakeFiles\lab3.dir\tests\test_complex.cpp.i
 
 CMakeFiles/lab3.dir/tests/test_complex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_complex.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\test_complex.cpp -o CMakeFiles\lab3.dir\tests\test_complex.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_complex.cpp -o CMakeFiles\lab3.dir\tests\test_complex.cpp.s
 
 CMakeFiles/lab3.dir/tests/test_vector.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/test_vector.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/test_vector.cpp
+CMakeFiles/lab3.dir/tests/test_vector.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_vector.cpp
 CMakeFiles/lab3.dir/tests/test_vector.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab3.dir/tests/test_vector.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_vector.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_vector.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_vector.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\test_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab3.dir/tests/test_vector.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_vector.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_vector.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_vector.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_vector.cpp
 
 CMakeFiles/lab3.dir/tests/test_vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_vector.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\test_vector.cpp > CMakeFiles\lab3.dir\tests\test_vector.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_vector.cpp > CMakeFiles\lab3.dir\tests\test_vector.cpp.i
 
 CMakeFiles/lab3.dir/tests/test_vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_vector.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\test_vector.cpp -o CMakeFiles\lab3.dir\tests\test_vector.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_vector.cpp -o CMakeFiles\lab3.dir\tests\test_vector.cpp.s
 
 CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/test_result_info.cpp
+CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_result_info.cpp
 CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_result_info.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_result_info.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\test_result_info.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_result_info.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_result_info.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_result_info.cpp
 
 CMakeFiles/lab3.dir/tests/test_result_info.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_result_info.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\test_result_info.cpp > CMakeFiles\lab3.dir\tests\test_result_info.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_result_info.cpp > CMakeFiles\lab3.dir\tests\test_result_info.cpp.i
 
 CMakeFiles/lab3.dir/tests/test_result_info.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_result_info.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\test_result_info.cpp -o CMakeFiles\lab3.dir\tests\test_result_info.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_result_info.cpp -o CMakeFiles\lab3.dir\tests\test_result_info.cpp.s
 
 CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/test_matrix.cpp
+CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_matrix.cpp
 CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_matrix.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_matrix.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\test_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_matrix.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_matrix.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_matrix.cpp
 
 CMakeFiles/lab3.dir/tests/test_matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_matrix.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\test_matrix.cpp > CMakeFiles\lab3.dir\tests\test_matrix.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_matrix.cpp > CMakeFiles\lab3.dir\tests\test_matrix.cpp.i
 
 CMakeFiles/lab3.dir/tests/test_matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_matrix.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\test_matrix.cpp -o CMakeFiles\lab3.dir\tests\test_matrix.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_matrix.cpp -o CMakeFiles\lab3.dir\tests\test_matrix.cpp.s
 
 CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: C:/Users/User/CLionProjects/lab3/tests/test_square_matrix.cpp
+CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_square_matrix.cpp
 CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.obj -c C:\Users\User\CLionProjects\lab3\tests\test_square_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_square_matrix.cpp
 
 CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\User\CLionProjects\lab3\tests\test_square_matrix.cpp > CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_square_matrix.cpp > CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.i
 
 CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\User\CLionProjects\lab3\tests\test_square_matrix.cpp -o CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_square_matrix.cpp -o CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.s
 
 # Object files for target lab3
 lab3_OBJECTS = \
@@ -206,7 +206,7 @@ lab3.exe: CMakeFiles/lab3.dir/build.make
 lab3.exe: CMakeFiles/lab3.dir/linkLibs.rsp
 lab3.exe: CMakeFiles/lab3.dir/objects1.rsp
 lab3.exe: CMakeFiles/lab3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable lab3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable lab3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -218,6 +218,6 @@ CMakeFiles/lab3.dir/clean:
 .PHONY : CMakeFiles/lab3.dir/clean
 
 CMakeFiles/lab3.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\User\CLionProjects\lab3 C:\Users\User\CLionProjects\lab3 C:\Users\User\CLionProjects\lab3\cmake-build-debug C:\Users\User\CLionProjects\lab3\cmake-build-debug C:\Users\User\CLionProjects\lab3\cmake-build-debug\CMakeFiles\lab3.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\jabaclaw4\CLionProjects\lab3n C:\Users\jabaclaw4\CLionProjects\lab3n C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles\lab3.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/lab3.dir/depend
 

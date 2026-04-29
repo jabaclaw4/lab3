@@ -112,7 +112,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake"
   "C:/Program Files/JetBrains/CLion2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/JetBrains/CLion2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake"
-  "C:/Users/User/CLionProjects/lab3/CMakeLists.txt"
+  "C:/Users/jabaclaw4/CLionProjects/lab3n/CMakeLists.txt"
   "CMakeFiles/3.28.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeRCCompiler.cmake"

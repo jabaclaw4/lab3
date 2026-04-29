@@ -130,6 +130,20 @@ public:
         }
 
         return result;
+
+    }
+
+    Sequence<T>* Where(bool (*predicate)(T)) const override {
+        ArraySequenceBase<T>* result = this->CreateNew(0);
+
+        for (int i = 0; i < this->GetLength(); i++) {
+            T item = this->Get(i);
+            if (predicate(item)) {
+                result->appendImpl(item);
+            }
+        }
+
+        return result;
     }
 
 protected:
