@@ -224,6 +224,30 @@ tests/test_matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_matrix.cpp.s
 .PHONY : tests/test_matrix.cpp.s
 
+tests/test_range_filters.obj: tests/test_range_filters.cpp.obj
+.PHONY : tests/test_range_filters.obj
+
+# target to build an object file
+tests/test_range_filters.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj
+.PHONY : tests/test_range_filters.cpp.obj
+
+tests/test_range_filters.i: tests/test_range_filters.cpp.i
+.PHONY : tests/test_range_filters.i
+
+# target to preprocess a source file
+tests/test_range_filters.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_range_filters.cpp.i
+.PHONY : tests/test_range_filters.cpp.i
+
+tests/test_range_filters.s: tests/test_range_filters.cpp.s
+.PHONY : tests/test_range_filters.s
+
+# target to generate assembly for a file
+tests/test_range_filters.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_range_filters.cpp.s
+.PHONY : tests/test_range_filters.cpp.s
+
 tests/test_result_info.obj: tests/test_result_info.cpp.obj
 .PHONY : tests/test_result_info.obj
 
@@ -320,6 +344,30 @@ tests/test_vector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector.cpp.s
 .PHONY : tests/test_vector.cpp.s
 
+tests/test_vector_functional.obj: tests/test_vector_functional.cpp.obj
+.PHONY : tests/test_vector_functional.obj
+
+# target to build an object file
+tests/test_vector_functional.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj
+.PHONY : tests/test_vector_functional.cpp.obj
+
+tests/test_vector_functional.i: tests/test_vector_functional.cpp.i
+.PHONY : tests/test_vector_functional.i
+
+# target to preprocess a source file
+tests/test_vector_functional.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.i
+.PHONY : tests/test_vector_functional.cpp.i
+
+tests/test_vector_functional.s: tests/test_vector_functional.cpp.s
+.PHONY : tests/test_vector_functional.s
+
+# target to generate assembly for a file
+tests/test_vector_functional.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab3.dir\build.make CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.s
+.PHONY : tests/test_vector_functional.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -341,6 +389,9 @@ help:
 	@echo ... tests/test_matrix.obj
 	@echo ... tests/test_matrix.i
 	@echo ... tests/test_matrix.s
+	@echo ... tests/test_range_filters.obj
+	@echo ... tests/test_range_filters.i
+	@echo ... tests/test_range_filters.s
 	@echo ... tests/test_result_info.obj
 	@echo ... tests/test_result_info.i
 	@echo ... tests/test_result_info.s
@@ -353,6 +404,9 @@ help:
 	@echo ... tests/test_vector.obj
 	@echo ... tests/test_vector.i
 	@echo ... tests/test_vector.s
+	@echo ... tests/test_vector_functional.obj
+	@echo ... tests/test_vector_functional.i
+	@echo ... tests/test_vector_functional.s
 .PHONY : help
 
 

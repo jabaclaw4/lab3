@@ -99,6 +99,41 @@ public:
         delete this->data;
         this->data = newData;
     }
+
+    MutableVector<T>& operator+=(const Vector<T>& other) {
+        if (this->GetSize() != other.GetSize()) {
+            throw std::invalid_argument("vectors must have same size");
+        }
+
+        for (int i = 0; i < this->GetSize(); i++) {
+            T val = this->Get(i) + other.Get(i);
+            this->Set(i, val);
+        }
+
+        return *this;
+    }
+
+    MutableVector<T>& operator-=(const Vector<T>& other) {
+        if (this->GetSize() != other.GetSize()) {
+            throw std::invalid_argument("vectors must have same size");
+        }
+
+        for (int i = 0; i < this->GetSize(); i++) {
+            T val = this->Get(i) - other.Get(i);
+            this->Set(i, val);
+        }
+
+        return *this;
+    }
+
+    MutableVector<T>& operator*=(const T& scalar) {
+        for (int i = 0; i < this->GetSize(); i++) {
+            T val = this->Get(i) * scalar;
+            this->Set(i, val);
+        }
+
+        return *this;
+    }
 };
 
 #endif

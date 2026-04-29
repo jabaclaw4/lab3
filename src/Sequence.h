@@ -141,6 +141,8 @@ public:
     }
 
     virtual Sequence<T>* Where(bool (*predicate)(T)) const = 0;
+    virtual Sequence<T>* Map(T (*func)(T)) const = 0;
+    virtual T Reduce(T (*func)(T, T), T initial) const = 0;
 };
 
 #endif

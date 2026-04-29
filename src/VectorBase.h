@@ -105,6 +105,15 @@ public:
         return sum;
     }
 
+    template <class Func>
+    Vector<T>* Map(Func f) const;
+
+    template <class Predicate>
+    Vector<T>* Where(Predicate pred) const;
+
+    template <class Func>
+    T Reduce(Func f, T initial) const;
+
 
 private:
     template <typename U>
@@ -119,5 +128,33 @@ private:
         }
     }
 };
+
+template <class T>
+template <class Func>
+Vector<T>* VectorBase<T>::Map(Func f) const {
+    Sequence<T>* newData = this->data->Map(f);
+
+    VectorBase<T>* result = this->CreateNew();
+    result->data = newData;
+
+    return result;
+}
+
+template <class T>
+template <class Predicate>
+Vector<T>* VectorBase<T>::Where(Predicate pred) const {
+    Sequence<T>* newData = this->data->Where(pred);
+
+    VectorBase<T>* result = this->CreateNew();
+    result->data = newData;
+
+    return result;
+}
+
+template <class T>
+template <class Func>
+T VectorBase<T>::Reduce(Func f, T initial) const {
+    return this->data->Reduce(f, initial);
+}
 
 #endif

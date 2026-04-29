@@ -94,6 +94,9 @@
 		<Unit filename="C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_matrix.cpp">
 			<Option target="lab3"/>
 		</Unit>
+		<Unit filename="C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_range_filters.cpp">
+			<Option target="lab3"/>
+		</Unit>
 		<Unit filename="C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_result_info.cpp">
 			<Option target="lab3"/>
 		</Unit>
@@ -104,6 +107,9 @@
 			<Option target="lab3"/>
 		</Unit>
 		<Unit filename="C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_vector.cpp">
+			<Option target="lab3"/>
+		</Unit>
+		<Unit filename="C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_vector_functional.cpp">
 			<Option target="lab3"/>
 		</Unit>
 		<Unit filename="C:/Users/jabaclaw4/CLionProjects/lab3n/CMakeLists.txt">

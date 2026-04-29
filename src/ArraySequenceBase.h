@@ -146,6 +146,27 @@ public:
         return result;
     }
 
+    Sequence<T>* Map(T (*func)(T)) const override {
+        int size = this->GetLength();
+        ArraySequenceBase<T>* result = this->CreateNew(size);
+
+        for (int i = 0; i < size; i++) {
+            result->items->Set(i, func(this->Get(i)));
+        }
+
+        return result;
+    }
+
+    T Reduce(T (*func)(T, T), T initial) const override {
+        T result = initial;
+
+        for (int i = 0; i < this->GetLength(); i++) {
+            result = func(this->Get(i), result);
+        }
+
+        return result;
+    }
+
 protected:
     //вспомогательная функция создать новый экземпляр (реализуется в наследниках)
     virtual ArraySequenceBase<T>* CreateNew(int size) const = 0;

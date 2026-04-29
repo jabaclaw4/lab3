@@ -11,4 +11,6 @@ add_executable(lab3 main.cpp
         tests/test_result_info.cpp
         tests/test_matrix.cpp
         tests/test_square_matrix.cpp
+        tests/test_range_filters.cpp
+        tests/test_vector_functional.cpp
 )

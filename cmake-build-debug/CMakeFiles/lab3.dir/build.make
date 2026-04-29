@@ -180,6 +180,34 @@ CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_square_matrix.cpp -o CMakeFiles\lab3.dir\tests\test_square_matrix.cpp.s
 
+CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_range_filters.cpp
+CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_range_filters.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_range_filters.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_range_filters.cpp
+
+CMakeFiles/lab3.dir/tests/test_range_filters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_range_filters.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_range_filters.cpp > CMakeFiles\lab3.dir\tests\test_range_filters.cpp.i
+
+CMakeFiles/lab3.dir/tests/test_range_filters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_range_filters.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_range_filters.cpp -o CMakeFiles\lab3.dir\tests\test_range_filters.cpp.s
+
+CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj: C:/Users/jabaclaw4/CLionProjects/lab3n/tests/test_vector_functional.cpp
+CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj: CMakeFiles/lab3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj -MF CMakeFiles\lab3.dir\tests\test_vector_functional.cpp.obj.d -o CMakeFiles\lab3.dir\tests\test_vector_functional.cpp.obj -c C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_vector_functional.cpp
+
+CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_vector_functional.cpp > CMakeFiles\lab3.dir\tests\test_vector_functional.cpp.i
+
+CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jabaclaw4\CLionProjects\lab3n\tests\test_vector_functional.cpp -o CMakeFiles\lab3.dir\tests\test_vector_functional.cpp.s
+
 # Object files for target lab3
 lab3_OBJECTS = \
 "CMakeFiles/lab3.dir/main.cpp.obj" \
@@ -189,7 +217,9 @@ lab3_OBJECTS = \
 "CMakeFiles/lab3.dir/tests/test_vector.cpp.obj" \
 "CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj" \
 "CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj" \
-"CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj"
+"CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj" \
+"CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj" \
+"CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj"
 
 # External object files for target lab3
 lab3_EXTERNAL_OBJECTS =
@@ -202,11 +232,13 @@ lab3.exe: CMakeFiles/lab3.dir/tests/test_vector.cpp.obj
 lab3.exe: CMakeFiles/lab3.dir/tests/test_result_info.cpp.obj
 lab3.exe: CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj
 lab3.exe: CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/tests/test_range_filters.cpp.obj
+lab3.exe: CMakeFiles/lab3.dir/tests/test_vector_functional.cpp.obj
 lab3.exe: CMakeFiles/lab3.dir/build.make
 lab3.exe: CMakeFiles/lab3.dir/linkLibs.rsp
 lab3.exe: CMakeFiles/lab3.dir/objects1.rsp
 lab3.exe: CMakeFiles/lab3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable lab3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\jabaclaw4\CLionProjects\lab3n\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable lab3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\lab3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
