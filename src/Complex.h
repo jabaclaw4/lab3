@@ -1,8 +1,9 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
 
-#include <iostream>
 #include <cmath>
+#include <stdexcept>
+#include <iosfwd>
 
 class Complex {
 private:
@@ -91,19 +92,6 @@ public:
             this->imag = other.imag;
         }
         return *this;
-    }
-
-    //вывод: a + bi (или a - bi если b < 0)
-    friend std::ostream& operator<<(std::ostream& os, const Complex& c) {
-        os << c.real;
-
-        if (c.imag >= 0) {
-            os << " + " << c.imag << "i";
-        } else {
-            os << " - " << (-c.imag) << "i";
-        }
-
-        return os;
     }
 };
 

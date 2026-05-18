@@ -3,18 +3,21 @@
 
 #include "DynamicArray.h"
 #include <stdexcept>
-#include <iostream>
+#include <iosfwd>
+
+template <class T> class Matrix;
+template <class T>
+std::ostream& operator<<(std::ostream& os, const Matrix<T>& matrix);
 
 //матрица на базе DynamicArray<DynamicArray<T>*>
 template <class T>
 class Matrix {
-protected:  //protected чтобы наследники могли использовать
+protected://protected чтобы наследники могли использовать
     DynamicArray<DynamicArray<T>*>* rows;  //массив указателей на строки
     int numRows;
     int numCols;
 
 public:
-    //создать матрицу размером rows x cols
     Matrix(int rows, int cols) : numRows(rows), numCols(cols) {
         if (rows <= 0 || cols <= 0) {
             throw std::invalid_argument("matrix dimensions must be positive");
@@ -93,32 +96,8 @@ public:
         return result;
     }
 
-    //вывод
-    friend std::ostream& operator<<(std::ostream& os, const Matrix<T>& matrix) {
-        os << "[";
-
-        for (int i = 0; i < matrix.numRows; i++) {
-            if (i > 0) {
-                os << " ";  //отступ для строк после первой
-            }
-
-            os << "[";
-            for (int j = 0; j < matrix.numCols; j++) {
-                os << matrix.Get(i, j);
-                if (j < matrix.numCols - 1) {
-                    os << ", ";
-                }
-            }
-            os << "]";
-
-            if (i < matrix.numRows - 1) {
-                os << std::endl;  //перевод строки между строками
-            }
-        }
-
-        os << "]";
-        return os;
-    }
+    //объявление дружественного оператора а определениев PrintUtils.h
+    friend std::ostream& operator<< <>(std::ostream& os, const Matrix<T>& matrix);
 
     int GetRows() const { return numRows; }
     int GetCols() const { return numCols; }

@@ -1,5 +1,5 @@
 CMakeFiles/lab3.dir/main.cpp.obj: \
- C:\Users\jabaclaw4\CLionProjects\lab3n\main.cpp \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\main.cpp \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -143,8 +143,8 @@ CMakeFiles/lab3.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/MutableVector.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/VectorBase.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/MutableVector.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/VectorBase.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/x86_64-w64-mingw32/include/math.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
@@ -160,16 +160,16 @@ CMakeFiles/lab3.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/Vector.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/ResultInfo.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/Sequence.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/Complex.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/MutableArraySequence.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/ArraySequenceBase.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/DynamicArray.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/ImmutableVector.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/ImmutableArraySequence.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/Complex.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/SquareMatrix.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/Matrix.h \
- C:\Users\jabaclaw4\CLionProjects\lab3n\src/all_tests.h
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/Vector.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/ResultInfo.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/Sequence.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/Complex.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/MutableArraySequence.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/ArraySequenceBase.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/DynamicArray.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/ImmutableVector.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/ImmutableArraySequence.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/Complex.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/SquareMatrix.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/Matrix.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/all_tests.h
