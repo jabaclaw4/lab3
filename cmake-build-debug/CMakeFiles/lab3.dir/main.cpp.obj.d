@@ -172,4 +172,5 @@ CMakeFiles/lab3.dir/main.cpp.obj: \
  C:\Users\jabaclaw4\CLionProjects\lab3true\src/Complex.h \
  C:\Users\jabaclaw4\CLionProjects\lab3true\src/SquareMatrix.h \
  C:\Users\jabaclaw4\CLionProjects\lab3true\src/Matrix.h \
- C:\Users\jabaclaw4\CLionProjects\lab3true\src/all_tests.h
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/all_tests.h \
+ C:\Users\jabaclaw4\CLionProjects\lab3true\src/PrintUtils.h

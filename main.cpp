@@ -5,6 +5,7 @@
 #include "src/Complex.h"
 #include "src/SquareMatrix.h"
 #include "src/all_tests.h"
+#include "src/PrintUtils.h"
 
 using namespace std;
 
