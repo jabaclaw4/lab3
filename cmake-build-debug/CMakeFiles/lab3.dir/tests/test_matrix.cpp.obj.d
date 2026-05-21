@@ -1,5 +1,5 @@
 CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: \
- C:\Users\jabaclaw4\CLionProjects\lab3true\tests\test_matrix.cpp \
+ C:\Users\User\CLionProjects\lab3true\tests\test_matrix.cpp \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -142,6 +142,6 @@ CMakeFiles/lab3.dir/tests/test_matrix.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/Matrix.h \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/DynamicArray.h \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/test_utils.h
+ C:/Users/User/CLionProjects/lab3true/src/Matrix.h \
+ C:/Users/User/CLionProjects/lab3true/src/DynamicArray.h \
+ C:/Users/User/CLionProjects/lab3true/src/test_utils.h

@@ -1,5 +1,5 @@
 CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: \
- C:\Users\jabaclaw4\CLionProjects\lab3true\tests\test_square_matrix.cpp \
+ C:\Users\User\CLionProjects\lab3true\tests\test_square_matrix.cpp \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -158,7 +158,7 @@ CMakeFiles/lab3.dir/tests/test_square_matrix.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
  C:/Program\ Files/JetBrains/CLion2024.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/SquareMatrix.h \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/Matrix.h \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/DynamicArray.h \
- C:/Users/jabaclaw4/CLionProjects/lab3true/src/test_utils.h
+ C:/Users/User/CLionProjects/lab3true/src/SquareMatrix.h \
+ C:/Users/User/CLionProjects/lab3true/src/Matrix.h \
+ C:/Users/User/CLionProjects/lab3true/src/DynamicArray.h \
+ C:/Users/User/CLionProjects/lab3true/src/test_utils.h
